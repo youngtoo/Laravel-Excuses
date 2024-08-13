@@ -1,6 +1,6 @@
 {
     "name": "iantoo/laravel-excuses",
-    "description": "A Laravel package that generates random excuses from a predefined li",
+    "description": "A Laravel package that generates random excuses from a predefined list of items",
     "type": "library",
     "require": {
         "illuminate/support": "^11.20"
