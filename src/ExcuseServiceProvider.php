@@ -20,6 +20,11 @@ class ExcuseServiceProvider extends ServiceProvider
                 ExcuseCommand::class,
             ]);
 
+            // Publish the configuration file
+            $this->publishes([
+                __DIR__ . '/../config/excuses.php' => config_path('excuses.php'),
+            ], 'config');
+
         }
     }
 }

@@ -3,29 +3,20 @@ namespace Iantoo\LaravelExcuses;
 
 class Excuse
 {
-    protected $excuses = [
-        'Work' => [
-            "Power went out in my neighborhood",
-            "My computer crashed just as I was saving my work",
-            "The traffic was horrible"
+    protected $fdefaultCategory;
+    protected $excuses;
 
-        ],
-        'School' => [
-            "The dog ate my homework",
-            "I thought the assignment was due next week",
-            "My alarm didn't go off."
-        ],
-        'Home' => [
-            "The kids wouldn't go to bed.",
-            "I had to fix a plumbing emergency",
-            "I lost track of time while cooking dinner."
-        ]
-    ];
+    public function __construct(){
+        $this->excuses = config('excuses.excuses');
+        $this->defaultCategory = config('excuses.default_category', 'Work');
+    }
 
+    public function getRandomExcuse( $category = null) {
+        
+        $category = $category ?? $this->defaultCategory;
 
-    public function getRandomExcuse( $category = 'Work') {
         if(!array_key_exists($category, $this->excuses)){
-            $category = "work";
+            $category = $this->defaultCategory;
         }
 
         $excuses = $this->excuses[$category];
