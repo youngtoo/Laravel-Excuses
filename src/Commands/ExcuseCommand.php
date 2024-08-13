@@ -11,6 +11,11 @@ class ExcuseCommand extends Command
 
     protected $excuse;
 
+    public function __construct(Excuse $excuse){
+        parent::__construct();
+        $this->excuse = $excuse;
+    }
+
     public function handle()
     {
         $category = $this->argument('category') ?? 'Work';
