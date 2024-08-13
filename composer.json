@@ -1,0 +1,20 @@
+{
+    "name": "iantoo/laravel-excuses",
+    "description": "A Laravel package that generates random excuses from a predefined li",
+    "type": "library",
+    "require": {
+        "illuminate/support": "^11.20"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Iantoo\\LaravelExcuses\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ian Too",
+            "email": "ianktoo@gmail.com"
+        }
+    ]
+}
