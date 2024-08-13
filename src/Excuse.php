@@ -10,7 +10,7 @@ class Excuse
             "The traffic was horrible"
 
         ],
-        'school' => [
+        'School' => [
             "The dog ate my homework",
             "I thought the assignment was due next week",
             "My alarm didn't go off."
