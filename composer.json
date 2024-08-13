@@ -16,5 +16,12 @@
             "name": "Ian Too",
             "email": "ianktoo@gmail.com"
         }
-    ]
+    ],
+    "extra": {
+        "laravel" :{
+            "providers": [
+                "Iantoo\\LaravelExcuses\\ExcuseServiceProvider"
+            ]
+        }
+    }
 }
